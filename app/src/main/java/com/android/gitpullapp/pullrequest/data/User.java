@@ -70,4 +70,8 @@ public class User {
     public String getGravatarId() {
         return gravatarId;
     }
+
+    public String getLogin() {
+        return login;
+    }
 }

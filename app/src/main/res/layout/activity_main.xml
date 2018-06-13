@@ -7,27 +7,57 @@
     tools:context=".MainActivity">
 
     <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/search"
+        android:id="@+id/owner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:textSize="12sp"
+        android:background="@drawable/search_bg"
+        android:hint="Enter Owner"
+        android:padding="@dimen/padding_small" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/repo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_small"
         android:background="@drawable/search_bg"
-        android:hint="Search"
-        android:padding="@dimen/padding_small" />
+        android:layout_toLeftOf="@+id/go"
+        android:layout_below="@+id/owner"
+        android:textSize="12sp"
+        android:hint="Enter Repository"
+        android:padding="@dimen/padding_small"
+        android:layout_toStartOf="@+id/go" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:minHeight="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_below="@+id/owner"
+        android:background="@drawable/button_bg"
+        android:text="Search"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/search"
+        android:layout_below="@+id/repo"
         android:layout_margin="@dimen/margin_small"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        app:layout_constraintTop_toBottomOf="@+id/repo" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/emptyView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/search"
+        android:layout_below="@+id/repo"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:text="No Pull Requests Found!!!"

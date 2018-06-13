@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:orientation="horizontal">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/avatar"
         android:layout_width="48dp"
-        android:layout_margin="4dp"
-        android:layout_height="48dp" />
+        android:layout_height="48dp"
+        android:layout_margin="4dp" />
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/name"
-        android:padding="8dp"
+        android:id="@+id/pull_request_name"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/avatar"
+        android:lines="2"
+        android:layout_toRightOf="@+id/avatar"
         android:gravity="center_vertical"
-        android:layout_height="48dp"
-        tools:text="User"/>
+        android:textColor="@color/black"
 
-</LinearLayout>
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Pull Request" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/user_and_date"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_toRightOf="@+id/avatar"
+        android:layout_below="@+id/pull_request_name"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        tools:text="12-10-2018" />
+
+</RelativeLayout>

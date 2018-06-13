@@ -8,11 +8,13 @@ import java.util.List;
 
 public class PullRequestContract {
 
-    interface View extends BaseView<Presenter>{
+    public interface View extends BaseView<Presenter>{
         void showPullRequests(List<PullRequest> pullRequests);
+        void showDialog();
+        void dismissDialog();
     }
 
-    interface Presenter extends BasePresenter{
+    public interface Presenter extends BasePresenter{
         void getPullRequests(String owner,String repo);
     }
 }

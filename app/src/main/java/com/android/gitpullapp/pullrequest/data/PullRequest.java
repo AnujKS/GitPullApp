@@ -110,4 +110,8 @@ public class PullRequest {
     public String getBody() {
         return body;
     }
+
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
 }

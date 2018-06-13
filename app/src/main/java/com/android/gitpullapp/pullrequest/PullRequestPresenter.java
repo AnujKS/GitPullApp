@@ -35,17 +35,18 @@ public class PullRequestPresenter implements PullRequestContract.Presenter {
                     @Override
                     public void onNext(List<PullRequest> requests) {
                         mView.showPullRequests(requests);
+                        mView.dismissDialog();
+                        mView.hideError();
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         mView.setError();
+                        mView.dismissDialog();
                     }
 
                     @Override
-                    public void onComplete() {
-
-                    }
+                    public void onComplete() { }
                 });
     }
 }
