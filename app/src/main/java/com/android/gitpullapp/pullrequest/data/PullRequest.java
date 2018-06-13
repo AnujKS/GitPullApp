@@ -90,4 +90,24 @@ public class PullRequest {
     @SerializedName("author_association")
     @Expose
     public String authorAssociation;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getBody() {
+        return body;
+    }
 }

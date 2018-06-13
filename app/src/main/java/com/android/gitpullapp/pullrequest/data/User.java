@@ -58,4 +58,16 @@ public class User {
     @SerializedName("site_admin")
     @Expose
     public Boolean siteAdmin;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public String getGravatarId() {
+        return gravatarId;
+    }
 }
